@@ -1,5 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Poiret+One&display=swap");
 
+@media (max-width: 768px) {
+  .nav__links {
+    display: none;
+  }
+  .nav__links.toggleMenu {
+    display: block;
+  }
+}
+
+@media (min-width: 769px) {
+  .hamIcon {
+    display: none;
+  }
+  .nav__links {
+    display: initial;
+  }
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -48,6 +66,8 @@ header {
   cursor: pointer;
   margin-right: auto;
   width: 5%;
+  min-width: 30px;
+  max-width: 50px;
 }
 
 .nav__links {
