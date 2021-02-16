@@ -10,7 +10,7 @@
 }
 
 @media (min-width: 769px) {
-  .hamIcon {
+  .open__menu {
     display: none;
   }
   .nav__links {
@@ -54,13 +54,13 @@ a {
   text-decoration: none;
 }
 
-header {
+/* header {
   background-color: rgb(87, 85, 85);
   display: flex;
   justify-content: flex-end;
   align-items: center;
   padding: 10px 20px;
-}
+} */
 
 .logo {
   cursor: pointer;
