@@ -1,15 +1,22 @@
-const mainMenu = document.querySelector(".main__menu");
-const closeMenu = document.querySelector(".close__menu");
-const openMenu = document.querySelector(".open__menu");
-
-openMenu.addEventListener("click", show);
-closeMenu.addEventListener("click", close);
+let mainMenu = document.querySelector(".nav__links");
+console.log("mainMenu: ", mainMenu);
+let closeMenu = document.querySelector(".close__menu");
+console.log("closeMenu: ", closeMenu);
+let openMenu = document.querySelector(".open__menu");
+console.log("openMenu: ", openMenu);
 
 function show() {
   mainMenu.style.display = "flex";
-  mainMenu.style.top = "0";
+  mainMenu.style.top = "0px";
 }
 
 function close() {
   mainMenu.style.top = "-100%";
 }
+
+openMenu.addEventListener("click", (e) => {
+  e.preventDefault();
+  mainMenu.classList.toggle("open__menu");
+  closeMenu.classList.toggle("close__menu");
+});
+closeMenu.addEventListener("click", close);

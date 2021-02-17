@@ -1,23 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poiret+One&display=swap");
 
-@media (max-width: 768px) {
-  .nav__links {
-    display: none;
-  }
-  .nav__links.toggleMenu {
-    display: block;
-  }
-}
-
-@media (min-width: 769px) {
-  .open__menu {
-    display: none;
-  }
-  .nav__links {
-    display: initial;
-  }
-}
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -33,6 +15,12 @@ body {
   min-height: 100vh;
 }
 
+nav {
+  color: black;
+  justify-content: space-between;
+  display: flex;
+}
+
 .hero {
   display: flex;
   justify-content: center;
@@ -45,44 +33,111 @@ h5 {
   padding-bottom: 15px;
 }
 
-li,
+/* li,
 a {
   font-family: "Poiret One", cursive;
   font-weight: 500;
   font-size: 16px;
   color: #edf0f1;
   text-decoration: none;
-}
+} */
 
-/* header {
+header {
   background-color: rgb(87, 85, 85);
-  display: flex;
+  display: flexbox;
   justify-content: flex-end;
   align-items: center;
   padding: 10px 20px;
-} */
+}
 
 .logo {
   cursor: pointer;
-  margin-right: auto;
-  width: 5%;
-  min-width: 30px;
-  max-width: 50px;
+  /* margin-right: 0%; */
+  /* position: relative; */
+  margin: 10px 15px 15px 10px;
+  max-height: 45px;
+  min-width: 35px;
+  max-width: 45px;
 }
 
 .nav__links {
   list-style: none;
+  display: flex;
 }
 
-.nav__links li {
+.nav__links li a {
+  transition: all 0.3 ease 0s;
+  display: inline-block;
+  padding: 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.nav__links li a:hover {
+  color: aqua;
+}
+
+.open__menu {
+  font-size: 1.5rem;
+  margin: 5px;
+  display: none;
+  cursor: pointer;
+}
+
+.nav__links .close__menu {
+  font-size: 2rem;
+  /* margin: 10px 15px 15px 10px; */
+  display: none;
+  cursor: pointer;
+  top: auto;
+}
+
+@media (max-width: 768px) {
+  .nav__links {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    transition: top 1s ease;
+    display: none;
+  }
+
+  .nav__links .close__menu {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  .open__menu {
+    display: block;
+  }
+
+  .nav__links li a:hover {
+    background: none;
+    font-size: 1.6rem;
+    color: rgb(255, 123, 0);
+  }
+}
+
+/* .nav__links li {
   display: inline-block;
   padding: 0px 20px;
 }
 
 .nav__links li a {
   transition: all 0.3 ease 0s;
+
+  background: none;
+  font-size: 1.6rem;
 }
 
-.nav__links li a:hover {
-  color: aqua;
-}
+ */
