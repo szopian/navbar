@@ -31,20 +31,11 @@ nav {
 
 h5 {
   padding-bottom: 15px;
+  color: rgb(252, 252, 252);
 }
-
-/* li,
-a {
-  font-family: "Poiret One", cursive;
-  font-weight: 500;
-  font-size: 16px;
-  color: #edf0f1;
-  text-decoration: none;
-} */
 
 header {
   background-color: rgb(87, 85, 85);
-  display: flexbox;
   justify-content: flex-end;
   align-items: center;
   padding: 10px 20px;
@@ -52,8 +43,6 @@ header {
 
 .logo {
   cursor: pointer;
-  /* margin-right: 0%; */
-  /* position: relative; */
   margin: 10px 15px 15px 10px;
   max-height: 45px;
   min-width: 35px;
@@ -88,7 +77,6 @@ header {
 
 .nav__links .close__menu {
   font-size: 2rem;
-  /* margin: 10px 15px 15px 10px; */
   display: none;
   cursor: pointer;
   top: auto;
@@ -115,6 +103,8 @@ header {
     position: absolute;
     top: 20px;
     right: 20px;
+    color: white;
+    margin: 6px;
   }
 
   .open__menu {
@@ -127,17 +117,3 @@ header {
     color: rgb(255, 123, 0);
   }
 }
-
-/* .nav__links li {
-  display: inline-block;
-  padding: 0px 20px;
-}
-
-.nav__links li a {
-  transition: all 0.3 ease 0s;
-
-  background: none;
-  font-size: 1.6rem;
-}
-
- */

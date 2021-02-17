@@ -14,9 +14,5 @@ function close() {
   mainMenu.style.top = "-100%";
 }
 
-openMenu.addEventListener("click", (e) => {
-  e.preventDefault();
-  mainMenu.classList.toggle("open__menu");
-  closeMenu.classList.toggle("close__menu");
-});
+openMenu.addEventListener("click", show);
 closeMenu.addEventListener("click", close);
