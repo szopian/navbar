@@ -8,7 +8,6 @@
 }
 
 body {
-  background-color: rgb(184, 182, 182);
   display: block;
   justify-content: center;
   align-items: center;
@@ -26,16 +25,17 @@ nav {
   justify-content: center;
   align-items: center;
   margin: 150px;
-  font-size: large;
+  font-size: 35px;
 }
 
 h5 {
-  padding-bottom: 15px;
-  color: rgb(252, 252, 252);
+  padding-bottom: 50px;
+  color: #00ffcc;
 }
 
 header {
-  background-color: rgb(87, 85, 85);
+  background: linear-gradient(#402565, #00ffcc);
+  /* background-color: rgb(117, 115, 115); */
   justify-content: flex-end;
   align-items: center;
   padding: 10px 20px;
@@ -65,7 +65,7 @@ header {
 }
 
 .nav__links li a:hover {
-  color: aqua;
+  color: #00ffcc;
 }
 
 .open__menu {
@@ -93,9 +93,10 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: black;
+    background: linear-gradient(#402565, #00ffcc);
     transition: top 1s ease;
     display: none;
+    padding-bottom: 50%;
   }
 
   .nav__links .close__menu {
@@ -107,13 +108,18 @@ header {
     margin: 6px;
   }
 
+  .nav__links .close__menu:hover {
+    background: none;
+    color: #00ffcc;
+  }
+
   .open__menu {
     display: block;
   }
 
   .nav__links li a:hover {
     background: none;
-    font-size: 1.6rem;
-    color: rgb(255, 123, 0);
+    font-size: 1.7rem;
+    color: rgb(3, 3, 59);
   }
 }
